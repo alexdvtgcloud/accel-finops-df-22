@@ -1,0 +1,35 @@
+<div class="modal fade" id="modal_add_budget" tabindex="-1" aria-labelledby="add_budget_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="add_budget_label">Add budget</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="{{url_for('create')}}" method="POST">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Date</label>
+                        <input type="month" class="form-control" id="budget_date_add" name="date" min="" value="" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Label</label>
+                        <div class="input-group">
+                            <span class="input-group-text">Key</span>
+                            <input type="text" class="form-control" name="label_key" value="" required>
+                            <span class="input-group-text"> Value </span>
+                            <input type="text" class="form-control" name="label_value" value="" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Amount</label>
+                        <input type="number" class="form-control" name="amount" value="" min="0" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

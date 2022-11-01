@@ -1,0 +1,8 @@
+project_id         = "accel-finops-df-22"
+region             = "europe-west1"
+zone               = "europe-west1-b"
+firestore_location = "europe-west3"
+state_location     = "EU"
+docker_repository  = "docker-repository"
+docker_image       = "budgets-app-image"
+app_name           = "budgets-app"

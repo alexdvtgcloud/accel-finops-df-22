@@ -1,0 +1,37 @@
+<div class="modal fade" id="modal_edit_budget_{{budget.id}}" tabindex="-1" aria-labelledby="edit_budget_label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="edit_budget_label">Edit budget</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="{{url_for('update', budget_id=budget.id)}}" method="POST">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Date</label>
+                        <input type="month" class="form-control" id="budget_date_edit_{{budget.id}}" name="date" min="" value="{{budget.date}}">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Label</label>
+                        {% for key, value in budget.label.items() %}
+                            <div class="input-group">
+                                <span class="input-group-text">Key</span>
+                                <input type="text" class="form-control" name="label_key" value="{{key}}">
+                                <span class="input-group-text"> Value </span>
+                                <input type="text" class="form-control" name="label_value" value="{{value}}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Amount</label>
+                        <input type="number" class="form-control" name="amount" value="{{budget.amount}}">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
