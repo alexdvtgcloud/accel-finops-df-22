@@ -1,4 +1,4 @@
-project_id         = "accel-finops-df-22"
+project_id         = "adelin-bobocea-sandbox1"
 region             = "europe-west1"
 zone               = "europe-west1-b"
 firestore_location = "europe-west3"
