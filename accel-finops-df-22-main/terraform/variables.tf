@@ -1,5 +1,5 @@
 variable "project_id" {
-  default = "accel-finops-df-22"
+  default = "adelin-bobocea-sandbox1"
 }
 
 variable "region" {
